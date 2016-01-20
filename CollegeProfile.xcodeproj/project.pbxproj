@@ -14,6 +14,7 @@
 		4FF189AC1C4FF58900A32991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF189AA1C4FF58900A32991 /* LaunchScreen.storyboard */; };
 		4FF189B71C4FF58900A32991 /* CollegeProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF189B61C4FF58900A32991 /* CollegeProfileTests.swift */; };
 		4FF189C21C4FF58900A32991 /* CollegeProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF189C11C4FF58900A32991 /* CollegeProfileUITests.swift */; };
+		4FF189D01C4FFA1400A32991 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF189CF1C4FFA1400A32991 /* College.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4FF189BD1C4FF58900A32991 /* CollegeProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF189C11C4FF58900A32991 /* CollegeProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeProfileUITests.swift; sourceTree = "<group>"; };
 		4FF189C31C4FF58900A32991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF189CF1C4FFA1400A32991 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				4FF189A11C4FF58900A32991 /* AppDelegate.swift */,
 				4FF189A31C4FF58900A32991 /* ViewController.swift */,
 				4FF189A51C4FF58900A32991 /* Main.storyboard */,
+				4FF189CF1C4FFA1400A32991 /* College.swift */,
 				4FF189A81C4FF58900A32991 /* Assets.xcassets */,
 				4FF189AA1C4FF58900A32991 /* LaunchScreen.storyboard */,
 				4FF189AD1C4FF58900A32991 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				4FF189A41C4FF58900A32991 /* ViewController.swift in Sources */,
 				4FF189A21C4FF58900A32991 /* AppDelegate.swift in Sources */,
+				4FF189D01C4FFA1400A32991 /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
