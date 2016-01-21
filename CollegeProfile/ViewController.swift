@@ -43,6 +43,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         self.presentViewController(myAlert, animated: true, completion: nil)
         }
+    @IBAction func editButtonTapped(sender: UIBarButtonItem)
+    {
+        myTableView.editing = !myTableView.editing
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let myTableCell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
@@ -53,6 +57,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return colleges.count
     }
-
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete{
+            colleges.removeAtIndex(indexPath.row)
+            myTableView.reloadData()
+        }
+    }
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let college = colleges[sourceIndexPath.row]
+        colleges.removeAtIndex(sourceIndexPath.row)
+        colleges.insert(college, atIndex: destinationIndexPath.row)
+    }
 }
 
