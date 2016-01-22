@@ -45,6 +45,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VEK-3O-fOz" kind="show" id="edp-vV-SMw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -72,6 +75,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="289"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="V1w-ZN-tx8">
+            <objects>
+                <viewController id="VEK-3O-fOz" customClass="DetailViewController" customModule="CollegeProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NY2-DX-0FI"/>
+                        <viewControllerLayoutGuide type="bottom" id="6eK-L8-dqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uML-wh-tCi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKO-KY-OEH">
+                                <rect key="frame" x="0.0" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="F45-MS-pcM"/>
+                                    <constraint firstAttribute="width" constant="300" id="Neq-zj-Xnl"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FpE-6v-ule">
+                                <rect key="frame" x="72" y="392" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-km-ylq">
+                                <rect key="frame" x="72" y="450" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifv-EQ-S3H">
+                                <rect key="frame" x="72" y="511" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-1B-gc5">
+                                <rect key="frame" x="103" y="549" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="VEK-3O-fOz" eventType="touchUpInside" id="cez-GL-HBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FpE-6v-ule" firstAttribute="centerX" secondItem="uML-wh-tCi" secondAttribute="centerX" id="UMu-D5-05R"/>
+                            <constraint firstItem="BJ2-km-ylq" firstAttribute="centerX" secondItem="uML-wh-tCi" secondAttribute="centerX" id="bKC-Q5-MfS"/>
+                            <constraint firstItem="Ifv-EQ-S3H" firstAttribute="centerX" secondItem="uML-wh-tCi" secondAttribute="centerX" id="huE-7G-ggq"/>
+                            <constraint firstItem="iKO-KY-OEH" firstAttribute="centerX" secondItem="uML-wh-tCi" secondAttribute="centerX" id="sTo-Mx-jov"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationTextField" destination="BJ2-km-ylq" id="GyC-Re-iIT"/>
+                        <outlet property="myImageView" destination="iKO-KY-OEH" id="FLR-n9-cHT"/>
+                        <outlet property="nameTextView" destination="FpE-6v-ule" id="JEz-jk-VcL"/>
+                        <outlet property="sizeTextField" destination="Ifv-EQ-S3H" id="Y5g-Tw-EKt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seH-jb-2fW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIk-oa-wcP">
