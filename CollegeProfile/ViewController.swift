@@ -14,9 +14,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var colleges: [College] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        colleges.append(College(n: "MIT", l: "Boston, Massachusetts", s: 16000, i: UIImage(named: "Default")!))
-        colleges.append(College(n: "Stanford University", l: "Stanford, California", s: 16136, i: UIImage(named: "Default")!))
-        colleges.append(College(n: "Caltech", l: "Pasadena, California", s: 2209, i: UIImage(named: "Default")!))
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        colleges.append(College(n: "MIT", l: "Boston, Massachusetts", s: 16000, i: UIImage(named: "mit")!))
+        colleges.append(College(n: "Stanford University", l: "Stanford, California", s: 16136, i: UIImage(named: "stanford")!))
+        colleges.append(College(n: "Caltech", l: "Pasadena, California", s: 2209, i: UIImage(named: "caltech")!))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -43,8 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         self.presentViewController(myAlert, animated: true, completion: nil)
         }
-    @IBAction func editButtonTapped(sender: UIBarButtonItem)
-    {
+
+    @IBAction func editButtonTapped(sender: UIBarButtonItem) {
         myTableView.editing = !myTableView.editing
     }
     

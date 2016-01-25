@@ -61,7 +61,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b2t-Ib-9rN">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="edit" id="FcT-pA-IIk"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="edit" id="FcT-pA-IIk">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="GSA-Lx-2ZA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="amJ-ys-si8">
                             <connections>
                                 <action selector="addButton:" destination="BYZ-38-t0r" id="Do7-Gr-3BO"/>
