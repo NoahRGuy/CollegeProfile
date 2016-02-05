@@ -16,9 +16,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         myTableView.dataSource = self
         myTableView.delegate = self
-        colleges.append(College(n: "MIT", l: "Boston, Massachusetts", s: 16000, i: UIImage(named: "mit")!))
-        colleges.append(College(n: "Stanford University", l: "Stanford, California", s: 16136, i: UIImage(named: "stanford")!))
-        colleges.append(College(n: "Caltech", l: "Pasadena, California", s: 2209, i: UIImage(named: "caltech")!))
+        colleges.append(College(n: "MIT", l: "Boston, Massachusetts", s: 16000, i: UIImage(named: "mit")!, w: "web.mit.edu"))
+        colleges.append(College(n: "Stanford University", l: "Stanford, California", s: 16136, i: UIImage(named: "stanford")!, w: "www.stanford.edu/"))
+        colleges.append(College(n: "Caltech", l: "Pasadena, California", s: 2209, i: UIImage(named: "caltech")!, w: "www.caltech.edu"))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,7 +29,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let collegeNameTextField = myAlert.textFields![0] as UITextField
             let locationTextField = myAlert.textFields![1] as UITextField
             let sizeTextField = myAlert.textFields![2] as UITextField
-            self.colleges.append(College(n: collegeNameTextField.text!, l: locationTextField.text!, s: Int(sizeTextField.text!)!))
+            let websiteTextField = myAlert.textFields![3] as UITextField
+            self.colleges.append(College(n: collegeNameTextField.text!, l: locationTextField.text!, s: Int(sizeTextField.text!)!, w: websiteTextField.text!))
             self.myTableView.reloadData()
         }
         myAlert.addAction(addAction)
@@ -42,6 +43,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         myAlert.addTextFieldWithConfigurationHandler { (studentTextField) -> Void in
             studentTextField.placeholder = "Enter Size Here"
+        }
+        myAlert.addTextFieldWithConfigurationHandler { (webTextField) -> Void in
+            webTextField.placeholder = "Enter Webpage Here"
         }
         self.presentViewController(myAlert, animated: true, completion: nil)
         }
